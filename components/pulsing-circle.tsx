@@ -1,7 +1,20 @@
 "use client"
 
-import { PulsingBorder } from "@paper-design/shaders-react"
+import { PulsingBorder as BasePulsingBorder } from "@paper-design/shaders-react"
 import { motion } from "framer-motion"
+
+type ExtendedPulsingBorderProps = React.ComponentProps<typeof BasePulsingBorder> & {
+  spotsPerColor?: number
+  spotSize?: number
+  pulse?: number
+  smoke?: number
+  smokeSize?: number
+  scale?: number
+  rotation?: number
+  frame?: number
+}
+
+const PulsingBorder = (props: ExtendedPulsingBorderProps) => <BasePulsingBorder {...props} />
 
 export default function PulsingCircle() {
   return (

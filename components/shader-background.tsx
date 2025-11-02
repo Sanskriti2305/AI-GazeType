@@ -3,7 +3,16 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { MeshGradient } from "@paper-design/shaders-react"
+import { MeshGradient as BaseMeshGradient } from "@paper-design/shaders-react"
+
+// 👇 Extend MeshGradient type to allow backgroundColor or other custom props
+type ExtendedMeshGradientProps = React.ComponentProps<typeof BaseMeshGradient> & {
+  backgroundColor?: string
+  wireframe?: boolean | string
+}
+
+const MeshGradient = (props: ExtendedMeshGradientProps) => <BaseMeshGradient {...props} />
+
 
 interface ShaderBackgroundProps {
   children: React.ReactNode
