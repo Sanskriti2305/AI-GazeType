@@ -21,9 +21,9 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "AI GazeType",
+  description: "Speak with your Gaze",
+  generator: "Sanskriti",
 }
 
 export default function RootLayout({
